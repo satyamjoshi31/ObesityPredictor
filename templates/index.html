@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Obesity Level Predictor</title>
+</head>
+<body>
+<h1>Obesity Level Predictor</h1>
+
+<form method = "post" action = "/predict">
+    <label>Age</label><br>
+    <input type = "text" name = "age"><br><br>
+
+    <label>Height in metre</label><br>
+    <input type = "text" name = "height"><br><br>
+
+    <label>Weight in kilogram</label><br>
+    <input type = "text" name = "weight"><br><br>
+
+    <label>Gender</label><br>
+    <select name = "gender">
+        <option value = "Male">Male</option>
+        <option value = "Female">Female</option>
+    </select><br><br>
+
+    <label>Smoking</label><br>
+    <select name = "smoking">
+        <option value = "yes">Yes</option>
+        <option value = "no">No</option>
+    </select><br><br>
+
+    <label>Alcohol Consumption</label><br>
+    <select name = "alcohol">
+        <option value = "no">Never</option>
+        <option value = "Sometimes">Sometimes</option>
+        <option value = "Frequently">Frequently</option>
+    </select><br><br>
+
+    <label>Family History with Overweight</label><br>
+    <select name = "family_overwt">
+        <option value = "yes">Yes</option>
+        <option value = "no">No</option>
+    </select><br><br>
+
+    <input type = "submit" value = "Predict">
+
+
+
+
+</form>
+{% if result %}
+<p>{{ result }}</p>
+{% endif %}
+</body>
+</html>
